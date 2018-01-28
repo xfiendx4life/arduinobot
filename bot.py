@@ -36,6 +36,7 @@ def handle_cat(message):
     if check_user(message.chat.id):
         ser.write(b'1')
         bot.send_message(message.chat.id, 'Цветы политы')
+        ser.write(b'0')
     else:
         bot.reply_to(message, 'Введи пароль в формате "passwоrd пароль"')
     
